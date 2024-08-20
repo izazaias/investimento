@@ -18,5 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('investimentos', [InvestimentoController::class, 'index'])->name('investimentos.index');
-Route::get('investimentos/{id}', [InvestimentoController::class, 'show'])->name('investimentos.show');
+Route::get('investimentos', [InvestimentoController::class, 'index']);
+Route::get('investimentos/simular', [InvestimentoController::class, 'simular']);
+Route::post('investimentos/resultados', [InvestimentoController::class, 'resultados']);
